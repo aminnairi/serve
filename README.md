@@ -26,3 +26,41 @@ $ node ./node_modules/.bin/serve --help
 $ sudo npm install --global @aminnairi/serve
 $ serve --help
 ```
+
+## Examples
+
+### Folder
+
+```console
+$ serve --folder public
+```
+
+### Host
+
+```console
+$ serve --host 0.0.0.0
+```
+
+### Port
+
+```console
+$ serve --port 5000
+```
+
+### Single-page application
+
+```console
+$ serve --spa
+```
+
+### Verbose
+
+```console
+$ serve --verbose
+```
+
+### Help
+
+```console
+$ serve --help
+```
