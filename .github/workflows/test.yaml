@@ -1,0 +1,25 @@
+name: Test
+
+on:
+  pull_request:
+    branches:
+      - latest
+
+  push:
+    branches:
+      - latest
+
+jobs:
+  test:
+    name: Check that the unit tests are passing
+    runs-on: ubuntu-20.04
+
+    steps:
+      - name: Checkout the project
+        run: actions/checkout@v2
+
+      - name: Install the dependencies
+        run: docker-compose run --rm npm install
+
+      - name: Run the unit tests
+        run: docker-compose run --rm npm test
