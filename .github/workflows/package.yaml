@@ -21,5 +21,8 @@ jobs:
       - name: Build the project
         run: docker-compose run --rm --user root -T npm run rollup
 
+      - name: Setup the environment
+        run: echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}" > .npmrc
+
       - name: Pack & Publish
-        run: docker-compose run --rm --user root -T -e NPM_TOKEN=${{ secrets.NPM_TOKEN }} npm publish --access=public
+        run: docker-compose run --rm --user root -T npm publish --access=public
