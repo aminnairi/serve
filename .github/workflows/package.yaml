@@ -1,11 +1,6 @@
 name: Package
 
 on:
-  workflow_run:
-    workflows: ["Test"]
-    branches: [latest]
-    types:
-      - completed
   push:
     branches:
       - latest
@@ -24,7 +19,7 @@ jobs:
         run: docker-compose run --rm --user root -T npm install
 
       - name: Build the project
-        run: docker-compose run --rm --user root -T npm run build
+        run: docker-compose run --rm --user root -T npm run rollup
 
       - name: Pack & Publish
         run: docker-compose run --rm --user root -T npm publish
