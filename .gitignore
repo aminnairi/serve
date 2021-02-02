@@ -1,3 +1,4 @@
 /.npm
 /node_modules
 /binary
+/.nyc_output
