@@ -1,5 +1,7 @@
 # @aminnairi/serve
 
+![Test](https://github.com/aminnairi/serve/workflows/Test/badge.svg) ![Package](https://github.com/aminnairi/serve/workflows/Package/badge.svg)
+
 ```console
 $ npx @aminnairi/serve --folder client
 Serving files from the client folder at http://127.0.0.1:8000. Hit CTRL+C at any time to stop.
