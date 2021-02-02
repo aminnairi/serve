@@ -73,6 +73,13 @@ server.listen(port, host, () => {
 server.on("error", ({message}) => {
   if (verbose) {
     console.error(message);
-    process.exit(1);
   }
+
+  process.exit(1);
+});
+
+process.on("SIGINT", () => {
+  server.close();
+  console.log("Server stopped gracefully.");
+  process.exit(0);
 });
