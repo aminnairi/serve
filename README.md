@@ -34,6 +34,37 @@ $ sudo npm install --global @aminnairi/serve
 $ serve --help
 ```
 
+### Docker
+
+```console
+$ docker run --interactive --tty --user node --workdir /home/node --volume "$PWD":/home/node --publish 8000:8000 node npx @aminnairi/serve --host 0.0.0.0 --port 8000
+```
+
+### Docker Compose
+
+```console
+$ touch docker-compose.yaml
+```
+
+```yaml
+version: "3"
+
+services:
+  server:
+    image: node
+    user: node
+    working_dir: /home/node
+    command: npx @aminnairi/server --host 0.0.0.0 --port 8000
+    ports:
+      - 8000:8000
+    volumes:
+      - .:/home/node
+```
+
+```console
+$ docker-compose up server
+```
+
 ## Examples
 
 ### Folder
