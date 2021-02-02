@@ -36,11 +36,15 @@ $ serve --help
 
 ### Folder
 
+*The folder from where to serve the static folder (default to the current folder).*
+
 ```console
 $ serve --folder public
 ```
 
 ### Host
+
+*The host from which to listen (default to 127.0.0.1).*
 
 ```console
 $ serve --host 0.0.0.0
@@ -48,11 +52,15 @@ $ serve --host 0.0.0.0
 
 ### Port
 
+*The port from which to listen (default to 8000).*
+
 ```console
 $ serve --port 5000
 ```
 
 ### Single-page application
+
+*Whether to route all request to the current folder's index.html file (default to false).*
 
 ```console
 $ serve --spa
@@ -60,11 +68,15 @@ $ serve --spa
 
 ### Verbose
 
+*Display error message on the console instead of hidding them.*
+
 ```console
 $ serve --verbose
 ```
 
 ### Help
+
+*Display the help in the console.*
 
 ```console
 $ serve --help
