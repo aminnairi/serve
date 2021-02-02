@@ -13,6 +13,7 @@ if (getOptionValue({name: "--help", fallback: false, boolean: true, options})) {
   console.log("--host: The host from which to listen (default to 127.0.0.1).");
   console.log("--port: The port from which to listen (default to 8000).");
   console.log("--spa: Whether to route all request to the current folder's index.html file (default to false).");
+  console.log("--verbose: Display error message on the console instead of hidding them.");
   console.log("Example: serve --folder public --host 0.0.0.0 --port 5000 --spa");
 
   process.exit(0);
