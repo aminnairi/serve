@@ -2,14 +2,36 @@
   "name": "@aminnairi/serve",
   "version": "0.1.0",
   "description": "Command-line interface for serving files.",
+  "homepage": "https://github.com/aminnairi/serve#readme",
+  "license": "MIT",
+  "binary": "binary/serve.mjs",
+  "scripts": {
+    "rollup": "rollup --config ./rollup.config.js"
+  },
   "bin": {
     "serve": "binary/serve.mjs"
   },
-  "engine": {
+  "keywords": [
+    "serve",
+    "server",
+    "http"
+  ],
+  "files": [
+    "binary/serve.mjs"
+  ],
+  "engines": {
     "node": "^14.0.0"
   },
-  "scripts": {
-    "rollup": "rollup --config ./rollup.config.js"
+  "bugs": {
+    "url": "https://github.com/aminnairi/serve/issues"
+  },
+  "author": {
+    "name": "Amin NAIRI"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/aminnairi/serve.git",
+    "directory": "."
   },
   "devDependencies": {
     "rollup": "^2.38.3",
