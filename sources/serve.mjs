@@ -1,10 +1,6 @@
 import {getOptionValue} from "./option.mjs";
-import {createServer} from "http";
-import {promises as fs} from "fs";
-import {getMimeTypeOr} from "./mime-type.mjs";
-import {join} from "path";
+import {serve} from "./server.mjs";
 
-const {readFile, lstat} = fs;
 const options = process.argv.slice(2);
 
 if (getOptionValue({name: "--help", fallback: false, boolean: true, options})) {
@@ -30,56 +26,16 @@ if (!Number.isInteger(port)) {
   process.exit(1);
 }
 
-const server = createServer(async (request, response) => {
-  try {
-    const requestPath = join(process.cwd(), folder, request.url);
-    const stat = await lstat(requestPath);
-    const filePath = join(requestPath, stat.isDirectory() ? "index.html" : "");
-    const fileBuffer = await readFile(filePath);
-    const fileContent = fileBuffer.toString();
+const main = async () => {
+  const server = await serve({folder, host, port, verbose, spa});
 
-    return response.writeHead(200, {
-      "Content-Type": getMimeTypeOr("text/plain", filePath)
-    }).end(fileContent);
-  } catch ({message}) {
-    if (verbose) {
-      console.error(message);
-    }
+  process.on("SIGINT", () => {
+    server.close();
+    console.log("Server stopped gracefully.");
+    process.exit(0);
+  });
+};
 
-    if (spa) {
-      try {
-        const filePath = join(process.cwd(), folder, "index.html");
-        const fileBuffer = await readFile(filePath);
-        const fileContent = fileBuffer.toString();
-
-        return response.writeHead(200, {
-          "Content-Type": getMimeTypeOr("text/plain", filePath)
-        }).end(fileContent);
-      } catch ({message: error}) {
-        if (verbose) {
-          console.error(error);
-        }
-      }
-    }
-  }
-
-  return response.writeHead(404, {}).end();
-});
-
-server.listen(port, host, () => {
-  console.log(`Serving files from the ${folder || "current"} folder at http://${host}:${port}. Hit CTRL+C at any time to stop.`);
-});
-
-server.on("error", ({message}) => {
-  if (verbose) {
-    console.error(message);
-  }
-
-  process.exit(1);
-});
-
-process.on("SIGINT", () => {
-  server.close();
-  console.log("Server stopped gracefully.");
-  process.exit(0);
+main().catch(({message}) => {
+  console.error(message);
 });
