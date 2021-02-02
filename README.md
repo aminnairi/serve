@@ -52,7 +52,7 @@ $ serve --host 0.0.0.0
 
 ### Port
 
-*The port from which to listen (default to 8000).*
+*The port from which to listen (default to 8000). Fail if not an integer.*
 
 ```console
 $ serve --port 5000
