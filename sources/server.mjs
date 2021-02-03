@@ -44,7 +44,8 @@ export const serve = ({folder, verbose, port, host, spa}) => {
     });
 
     server.listen(port, host, () => {
-      console.log(`Serving files from the ${folder || "current"} folder at http://${host}:${port}. Hit CTRL+C at any time to stop.`);
+      const folderName = folder.length === "" || folder === "." ? "current" : folder;
+      console.log(`Serving files from the ${folderName} folder at http://${host}:${port}. Hit CTRL+C at any time to stop.`);
       resolve(server);
     });
 
