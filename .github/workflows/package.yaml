@@ -18,6 +18,9 @@ jobs:
       - name: Install the dependencies
         run: docker-compose run --rm --user root -T npm install
 
+      - name: Check that the unit test are passing
+        run: docker-compose run --rm --user root -T npm test
+
       - name: Build the project
         run: docker-compose run --rm --user root -T npm run rollup
 
