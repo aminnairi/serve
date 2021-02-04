@@ -21,6 +21,9 @@ jobs:
       - name: Check that the unit test are passing
         run: docker-compose run --rm --user root -T npm test
 
+      - name: Check that the code style remains consistent
+        run: docker-compose run --rm --user root -T npm test
+
       - name: Build the project
         run: docker-compose run --rm --user root -T npm run rollup
 
