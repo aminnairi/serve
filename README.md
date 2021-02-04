@@ -1,6 +1,6 @@
 # @aminnairi/serve
 
-![Test](https://github.com/aminnairi/serve/workflows/Test/badge.svg) ![Package](https://github.com/aminnairi/serve/workflows/Package/badge.svg)
+[![Test](https://github.com/aminnairi/serve/workflows/Test/badge.svg)](https://github.com/aminnairi/serve/actions?query=workflow%3ATest) [![Package](https://github.com/aminnairi/serve/workflows/Package/badge.svg)](https://github.com/aminnairi/serve/actions?query=workflow%3APackage) [![Code Style](https://github.com/aminnairi/serve/workflows/Code%20Style/badge.svg)](https://github.com/aminnairi/serve/actions?query=workflow%3A%22Code+Style%22)
 
 ```console
 $ npx @aminnairi/serve --folder client
