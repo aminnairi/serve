@@ -1,0 +1,21 @@
+name: Code Style
+
+on:
+  pull_request:
+    branches:
+      - latest
+
+jobs:
+  test:
+    name: Check that the code style remains consistent
+    runs-on: ubuntu-20.04
+
+    steps:
+      - name: Checkout the project
+        uses: actions/checkout@v2
+
+      - name: Install the dependencies
+        run: docker-compose run --rm --user root -T npm install
+
+      - name: Run the linter
+        run: docker-compose run --rm --user root -T npm run eslint
