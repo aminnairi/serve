@@ -16,4 +16,4 @@ export default {
     format: "esm",
     banner: "#!/usr/bin/env node"
   }
-}
+};
