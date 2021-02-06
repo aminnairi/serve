@@ -56,7 +56,7 @@ services:
     image: node
     user: node
     working_dir: /home/node
-    command: npx @aminnairi/server --host 0.0.0.0 --port 8000
+    command: npx @aminnairi/serve --host 0.0.0.0 --port 8000
     ports:
       - 8000:8000
     volumes:
