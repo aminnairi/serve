@@ -2,10 +2,25 @@
 
 ## Summary
 
+- [`0.3.0`](#030)
 - [`0.2.0`](#020)
 - [`0.1.0`](#010)
 
 ## Versions
+
+### 0.3.0
+
+#### Breaking changes
+
+None.
+
+#### New features
+
+-  Added a new base option ([#4](https://github.com/aminnairi/serve/pull/4))
+
+#### Minor changes, bug & security fixes
+
+None.
 
 ### 0.2.0
 
