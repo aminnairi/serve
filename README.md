@@ -99,6 +99,14 @@ $ serve --port 5000
 $ serve --spa
 ```
 
+### Base
+
+*Set a base prefix url (default to empty) useful for GitHub Pages for instance.*
+
+```console
+$ serve --base aminnairi
+```
+
 ### Verbose
 
 *Display error message on the console instead of hidding them.*
