@@ -1,6 +1,8 @@
 # @aminnairi/serve
 
-[![Test](https://github.com/aminnairi/serve/workflows/Test/badge.svg)](https://github.com/aminnairi/serve/actions?query=workflow%3ATest) [![Package](https://github.com/aminnairi/serve/workflows/Package/badge.svg)](https://github.com/aminnairi/serve/actions?query=workflow%3APackage) [![Code Style](https://github.com/aminnairi/serve/workflows/Code%20Style/badge.svg)](https://github.com/aminnairi/serve/actions?query=workflow%3A%22Code+Style%22)
+Command-line interface for serving files.
+
+[![Code Style](https://github.com/aminnairi/serve/workflows/Code%20Style/badge.svg)](https://github.com/aminnairi/serve/actions?query=workflow%3A%22Code+Style%22) [![Test](https://github.com/aminnairi/serve/workflows/Test/badge.svg)](https://github.com/aminnairi/serve/actions?query=workflow%3ATest) [![Package](https://github.com/aminnairi/serve/workflows/Package/badge.svg)](https://github.com/aminnairi/serve/actions?query=workflow%3APackage)
 
 ```console
 $ npx @aminnairi/serve --folder client
