@@ -24,7 +24,7 @@ jobs:
         run: docker-compose run --rm --user root -T npm test
 
       - name: Build the project
-        run: docker-compose run --rm --user root -T npm run rollup
+        run: docker-compose run --rm --user root -T npm run build
 
       - name: Setup the environment
         run: echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}" > .npmrc
