@@ -63,7 +63,7 @@ export const serve = ({folder, verbose, port, host, spa, base}) => {
     });
 
     server.listen(port, host, () => {
-      const folderName = "" === folder.length || "." === folder ? "current" : folder;
+      const folderName = 0 === folder.length || "." === folder ? "current" : folder;
       console.log(`Serving files from the ${folderName} folder${base ? ` (with a base url of ${base})` : ""} at http://${host}:${port}. Hit CTRL+C at any time to stop.`);
       resolve(server);
     });
