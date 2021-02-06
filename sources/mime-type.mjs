@@ -3,17 +3,17 @@ import {extname} from "path";
 export const getMimeTypeOr = (fallback, path) => {
   const extension = extname(path);
 
-  if (extension === ".html") {
+  if (".html" === extension) {
     return "text/html";
   }
 
-  if (extension === ".css") {
+  if (".css" === extension) {
     return "text/css";
   }
 
-  if (extension === ".js" || extension === ".mjs") {
+  if (".js" === extension || ".mjs" === extension) {
     return "application/javascript";
   }
-  
+
   return fallback;
 };

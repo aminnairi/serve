@@ -18,4 +18,4 @@ jobs:
         run: docker-compose run --rm --user root -T npm install
 
       - name: Run the linter
-        run: docker-compose run --rm --user root -T npm run eslint
+        run: docker-compose run --rm --user root -T npm run lint

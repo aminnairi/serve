@@ -1,5 +1,5 @@
 export const getOptionValue = ({name, fallback, boolean, options}) => {
-  if (options.length === 0) {
+  if (0 === options.length) {
     return fallback;
   }
 
@@ -18,8 +18,8 @@ export const getOptionValue = ({name, fallback, boolean, options}) => {
   }
 
   if (next) {
-    return getOptionValue({name, fallback, boolean, options: [next, ...rest]});
+    return getOptionValue({boolean, fallback, name, options: [next, ...rest]});
   }
 
-  return getOptionValue({name, fallback, boolean, options: rest});
+  return getOptionValue({boolean, fallback, name, options: rest});
 };

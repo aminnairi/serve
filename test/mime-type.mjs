@@ -1,6 +1,6 @@
-import {describe, it} from "mocha";
 import chai from "chai";
 import {getMimeTypeOr} from "../sources/mime-type.mjs";
+import {describe, it} from "mocha";
 
 const {expect} = chai;
 

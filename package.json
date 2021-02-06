@@ -6,9 +6,9 @@
   "license": "MIT",
   "binary": "binary/serve.mjs",
   "scripts": {
-    "eslint": "eslint .",
+    "lint": "eslint .",
     "test": "mocha",
-    "rollup": "rollup --config ./rollup.config.js"
+    "build": "rollup --config ./rollup.config.js"
   },
   "bin": {
     "serve": "binary/serve.mjs"
@@ -36,6 +36,7 @@
     "directory": "."
   },
   "devDependencies": {
+    "@aminnairi/eslint-config": "github:aminnairi/eslint-config",
     "chai": "^4.2.0",
     "eslint": "^7.19.0",
     "mocha": "^8.2.1",

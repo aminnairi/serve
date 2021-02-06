@@ -1,31 +1,31 @@
 "use strict";
 
 module.exports = {
-  "extends": "eslint:recommended",
+  extends: "@aminnairi",
   overrides: [
     {
-      files: ["*.js"],
       env: {
-        node: true,
-        commonjs: true
+        commonjs: true,
+        node: true
       },
+      files: ["*.js"],
       parserOptions: {
         impliedStrict: false
       }
     },
     {
-      files: ["*.mjs", "rollup.config.js"],
       env: {
-        node: true,
-        es2021: true
+        es2021: true,
+        node: true
       },
+      files: ["*.mjs", "rollup.config.js"],
       parserOptions: {
-        sourceType: "module",
-        ecmaVersion: 12
+        ecmaVersion: 12,
+        sourceType: "module"
       }
     }
   ],
-  "rules": {
+  rules: {
     "indent": [
       "error",
       2
@@ -34,6 +34,7 @@ module.exports = {
       "error",
       "unix"
     ],
+    "no-ternary": "off",
     "quotes": [
       "error",
       "double"

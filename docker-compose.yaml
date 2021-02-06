@@ -18,3 +18,14 @@ services:
     command: --help
     volumes:
       - .:/home/node
+
+  node:
+    image: node:15.0.0
+    user: node
+    working_dir: /home/node
+    entrypoint: node
+    command: --help
+    ports:
+      - 8000:8000
+    volumes:
+      - .:/home/node
