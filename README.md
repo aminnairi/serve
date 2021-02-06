@@ -11,7 +11,7 @@ Serving files from the client folder at http://127.0.0.1:8000. Hit CTRL+C at any
 
 ## Requirements
 
-- [Node](https://nodejs.org/en/)
+- [Node 14.0.0 or later](https://nodejs.org/en/)
 - [NPM](https://www.npmjs.com/)
 
 ## Usage
