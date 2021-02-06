@@ -2,24 +2,9 @@ import {createServer} from "http";
 import {promises as fs} from "fs";
 import {getMimeTypeOr} from "./mime-type.mjs";
 import {join} from "path";
+import {removeLeading, removeTrailing} from "./string.mjs";
 
 const {readFile, lstat} = fs;
-
-const removeTrailing = (trailingText, text) => {
-  if (text.endsWith(trailingText)) {
-    return text.slice(0, -trailingText.length);
-  }
-
-  return text;
-};
-
-const removeLeading = (leadingText, text) => {
-  if (text.endsWith(leadingText)) {
-    return text.slice(leadingText.length);
-  }
-
-  return text;
-};
 
 export const serve = ({folder, verbose, port, host, spa, base}) => {
   const separator = "/";
