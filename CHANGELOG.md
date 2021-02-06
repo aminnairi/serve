@@ -2,6 +2,7 @@
 
 ## Summary
 
+- [`0.3.4`](#034)
 - [`0.3.3`](#033)
 - [`0.3.2`](#032)
 - [`0.3.1`](#031)
@@ -10,6 +11,20 @@
 - [`0.1.0`](#010)
 
 ## Versions
+
+### 0.3.4
+
+#### Breaking changes
+
+None.
+
+#### New features
+
+None.
+
+#### Minor changes, bug & security fixes
+
+- Fixed trailing leading text functions ([#12](https://github.com/aminnairi/serve/pull/12))
 
 ### 0.3.3
 
