@@ -2,11 +2,26 @@
 
 ## Summary
 
+- [`0.3.1`](#031)
 - [`0.3.0`](#030)
 - [`0.2.0`](#020)
 - [`0.1.0`](#010)
 
 ## Versions
+
+### 0.3.1
+
+#### Breaking changes
+
+None.
+
+#### New features
+
+None.
+
+#### Minor changes, bug & security fixes
+
+- Fixed an issue with the name of the package in the documentation ([#6](https://github.com/aminnairi/serve/pull/6))
 
 ### 0.3.0
 
